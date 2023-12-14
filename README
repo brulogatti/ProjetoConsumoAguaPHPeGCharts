@@ -1,0 +1,51 @@
+Nome do Sistema: Sistema de Monitoramento de Consumo de Água
+
+Requisitos Funcionais:
+
+    Cadastro de Usuários:
+        O sistema permite o registro de novos usuários.
+        Os detalhes do usuário (nome, e-mail, senha) serão salvos em um arquivo JSON chamado "usuarios.json".
+        Os usuários devem ser autenticados com login e senha.
+        Os dados do usuário devem ser validados para evitar informações duplicadas ou inválidas.
+
+    Autenticação:
+        Os usuários devem fazer login com seu e-mail e senha.
+        O sistema verifica as credenciais e permite o acesso apenas aos usuários autenticados.
+
+    Painel do Usuário:
+        Após o login, os usuários têm acesso ao seu próprio painel de controle.
+        O painel mostra informações sobre o consumo de água do usuário, incluindo gráficos e tabelas.
+        Os usuários podem registrar novas atividades de consumo de água no painel.
+
+    Registro de Atividades:
+        Os usuários podem registrar atividades de consumo de água, como banho, escovar os dentes, lavar roupa, lavar louça, etc.
+        Cada registro de atividade deve incluir a data, a quantidade de água gasta (em litros) e o tipo de atividade.
+        Os dados das atividades serão salvos em um arquivo JSON separado para cada usuário (por exemplo, "atividades_user123.json").
+
+    Cálculo do Consumo:
+        O sistema calcula o consumo total de água de cada usuário com base nas atividades registradas.
+        Os dados de consumo são atualizados e exibidos no painel do usuário.
+        Os cálculos levam em consideração as atividades registradas em um período específico (por exemplo, mensal ou anual).
+
+    Redução de Consumo:
+        Os usuários têm a opção de definir metas de redução de consumo de água em seu painel de controle.
+        O sistema monitora o progresso em relação às metas e fornece feedback aos usuários sobre seu desempenho na redução do consumo.
+
+    Comparativos de Consumo:
+        O sistema permite que os usuários gerem relatórios e comparativos de consumo de água ao longo dos meses.
+        Os comparativos podem ser visualizados em gráficos ou tabelas, facilitando a compreensão das tendências de consumo.
+
+    Cookies e Sessão:
+        O sistema utiliza sessões para rastrear a autenticação do usuário.
+        Cookies são usados para lembrar o login do usuário na próxima visita.
+
+    Manipulação de Arquivos:
+        O sistema lê e escreve dados em arquivos JSON para armazenar informações de usuário, atividades e metas de redução de consumo.
+        Ele deve ser capaz de lidar com múltiplos arquivos JSON para diferentes usuários.
+
+Requisitos Não Funcionais:
+
+    Interface do Usuário:
+        A interface do usuário deve ser intuitiva e responsiva, permitindo que os usuários registrem atividades facilmente, definam metas de redução e visualizem relatórios de consumo.
+
+Lembre-se de que esta é uma especificação de alto nível e que a implementação real envolverá a criação de scripts PHP, HTML, JavaScript e CSS para construir a interface do usuário, autenticação, manipulação de arquivos JSON, cálculos de consumo de água, acompanhamento de metas de redução e geração de relatórios de consumo ao longo dos meses. Além disso, medidas adicionais de segurança e validação de entrada devem ser implementadas para garantir um sistema seguro e confiável.
